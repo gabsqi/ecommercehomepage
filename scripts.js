@@ -37,7 +37,8 @@ function update(direction) {
     items[active].classList.add('active')
     dots[active].classList.add('active')
 
-    numberIndicator.textContent = active + 1
+    numberIndicator.textContent = String(active + 1).padStart(2, '0');
+
 
 }
 
@@ -53,4 +54,5 @@ prevButton.addEventListener('click', () => {
 
 nextButton.addEventListener('click', () => {
     update (1)
+
 })
